@@ -9,3 +9,5 @@ def index(response, id):
     item = ls.item_set.get(id=1)
     return HttpResponse(f"<h1>{ls.name}</h1> <h3>{item.text}</h3>")
 
+def home(response):
+    return render(response, "main/home.html", {})
